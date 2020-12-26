@@ -32,10 +32,6 @@ public class 字符串加乘 {
         return result.reverse().toString();
     }
 
-    private int c(int a,int single){
-
-    }
-
 
     public static void main(String[] args) {
         char l = "123".charAt(0);
