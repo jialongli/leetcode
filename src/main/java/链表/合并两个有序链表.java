@@ -68,12 +68,11 @@ public class 合并两个有序链表 {
         while (l1 != null && l2 != null) {
             if (l1.val <= l2.val) {
                 cur.next = l1;
-                cur=cur.next;
+                cur = cur.next;
                 l1 = l1.next;
-            }
-            if (l1.val > l2.val) {
+            } else {
                 cur.next = l2;
-                cur=cur.next;
+                cur = cur.next;
                 l2 = l2.next;
             }
         }
@@ -83,7 +82,7 @@ public class 合并两个有序链表 {
         } else {
             cur.next = l1;
         }
-        return cur.next;
+        return head.next;
     }
 }
 

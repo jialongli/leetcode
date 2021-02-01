@@ -4,7 +4,6 @@ public class 字符串加乘 {
     public String multiply(String num1, String num2) {
         int i = num1.length() - 1;
         int j = num2.length() - 1;
-
         int jw = 0;
         int flag = 0;
         StringBuilder result = new StringBuilder();
