@@ -11,12 +11,12 @@ import java.util.List;
  */
 public class 是否有环 {
     /**
-     * 是否有环
+     * 是否有环 刚开始写的 略搓
      *
      * @param head
      * @return
      */
-    public static boolean hasCycle(ListNode head) {
+    public static boolean hasCycle2(ListNode head) {
         //如果只有一个节点,那么不可能是环
         if (head == null || head.next == null) {
             return false;
@@ -37,6 +37,27 @@ public class 是否有环 {
         } else {
             return true;
         }
+
+    }
+
+
+    /**
+     * 是否有环 官方的,其实看最后有没有指向同一个就行了
+     *
+     * @param head
+     * @return
+     */
+    public static boolean hasCycle(ListNode head) {
+        ListNode fast = head.next;
+        ListNode slow = head;
+        while (fast != slow) {
+            if (fast == null || fast.next == null) {
+                return false;
+            }
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        return true;
 
     }
 
